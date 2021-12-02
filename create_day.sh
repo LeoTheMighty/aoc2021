@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Create a module
 # "NAME SPECIFIED" - (make sure we don't overwrite one accidentally)
 #   - mod.rs (just contains "pub mod solution")
