@@ -1,5 +1,7 @@
-mod test;
+mod common { pub mod common; }
+// mod day1;
+mod day2;
 
 fn main() {
-    test::solution::print_solution();
+    day2::solution::print_solution();
 }
