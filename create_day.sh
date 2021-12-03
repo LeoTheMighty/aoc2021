@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Create a module
+# Create a module (arg 1: module name, arg 2: test input solution)
 # "NAME SPECIFIED" - (make sure we don't overwrite one accidentally)
 #   - mod.rs (just contains "pub mod solution")
 #   - solution.rs (contains "pub fn print_solution() {}")
+#   - input_test.txt (contains the test input data)
 
 echo "Creating solution directory $1"
 if [ ! -d "src/$1" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
   mkdir "src/$1"
   echo "pub mod solution;" >> "src/$1/mod.rs"
-  echo "pub fn print_solution() {
-  println!(\"Hello world!\");
-}
-" >> "src/$1/solution.rs"
+  cp "src/common/solution.rs" "src/$1/solution.rs"
 
   touch "src/$1/input_test.txt"
 else
