@@ -1,10 +1,10 @@
 use crate::common::common::read_lines;
 
-pub fn print_solution() {
+pub fn get_solution(input_path: &str) -> String {
   let mut pos = 0;
   let mut depth = 0;
   let mut aim = 0;
-  if let Ok(lines) = read_lines("./src/day2/input.txt") {
+  if let Ok(lines) = read_lines(input_path) {
     for line_result in lines {
       if let Ok(line) = line_result {
         let parts = line.split(" ").collect::<Vec<&str>>();
@@ -25,5 +25,5 @@ pub fn print_solution() {
     }
   }
 
-  println!("{}", pos * depth);
+  return (pos * depth).to_string();
 }
