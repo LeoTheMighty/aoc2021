@@ -14,9 +14,9 @@ pub fn just_print_solution(solution: String) {
 
 pub fn print_solution(solution: String, test_solution: String, test_answer: &str) -> bool {
     just_print_solution(solution);
-    println!("Testing Expected: {} vs Actual: {}", test_solution, test_answer);
-    if test_solution.eq(test_answer) {
-        eprintln!("DOES NOT PASS TEST CASE!!! Expected: \"{}\", Actual: \"{}\"", test_answer, test_solution);
+    println!("Test Case --- Expected: {} vs Actual: {}", test_solution, test_answer);
+    if !test_solution.eq(test_answer) {
+        eprintln!("!!!DOES NOT PASS TEST CASE!!! Expected: \"{}\", Actual: \"{}\"", test_answer, test_solution);
         return false;
     }
     println!("passes the test case :)");
