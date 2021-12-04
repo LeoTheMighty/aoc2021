@@ -71,6 +71,7 @@ pub fn get_solution(input_path: &str) -> String {
       }
 
       println!("{}", binary_numbers.len());
+      println!("{}", 1);
       let mut i: i32 = (binary_numbers.len() - 1) as i32;
       let most_common: char = if vote >= 0 { '1' } else { '0' };
       let least_common: char = if vote >= 0 { '0' } else { '1' };
