@@ -6,6 +6,8 @@
 #   - solution.rs (contains "pub fn print_solution() {}")
 #   - input_test.txt (contains the test input data)
 
+set -o noclobber
+
 echo "Creating solution directory $1"
 if [ ! -d "src/$1" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
@@ -28,4 +30,4 @@ fn main() {
         \"$2\"
     );
 }
-" >> "./src/main.rs"
+" >| "./src/main.rs"
