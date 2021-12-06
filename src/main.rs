@@ -5,7 +5,7 @@ fn main() {
     common::common::print_solution(
         day4::solution::get_solution("./src/day4/input.txt"),
         day4::solution::get_solution("./src/day4/input_test.txt"),
-        "4512"
+        "1924"
     );
 }
 
