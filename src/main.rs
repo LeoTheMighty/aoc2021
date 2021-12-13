@@ -1,11 +1,11 @@
 mod common { pub mod common; }
-mod day9;
+mod day8;
 
 fn main() {
     common::common::print_solution(
-        day9::solution::get_solution("./src/day9/input.txt"),
-        day9::solution::get_solution("./src/day9/input_test.txt"),
-        "1134"
+        day8::solution2::get_solution("./src/day8/input.txt"),
+        day8::solution2::get_solution("./src/day8/input_test.txt"),
+        "61229"
     );
 }
 
